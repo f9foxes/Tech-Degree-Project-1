@@ -10,18 +10,55 @@ project 1 - A Random Quote Generator
 /*** 
  * `quotes` array 
 ***/
+const quotes = [
+  {
+    quote: '1',
+    source: '',
+    citation: '',
+    year: ''
+  },
+  {
+    quote: '2',
+    source: '',
+  },
+  {
+    quote: '3',
+    source: '',
+  },
+  {
+    quote: '4',
+    source: '',
+  },
+  {
+    quote: '5',
+    source: '',
+  },
+  {
+    quote: '6',
+    source: '',
+  },
+  {
+    quote: '7',
+    source: '',
+  },
+]
 
 
 
 /***
  * `getRandomQuote` function
 ***/
-
-
+function getRandomQuote (arr) {
+  let randomNum = Math.floor( Math.random() * arr.length) + 1;
+  let quote = arr[randomNum -1].quote;
+  return quote;
+}
+console.log(getRandomQuote(quotes));
 
 /***
  * `printQuote` function
 ***/
+
 
 
 
