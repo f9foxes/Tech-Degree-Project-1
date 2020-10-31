@@ -14,44 +14,44 @@ const quotes = [
   {
     quote: 'On matters of style, swim with the current, on matters of principle, stand like a rock.',
     source: 'Thomas Jefferson',
-    year: '',
-    citation: '' 
+    citation: '',
+    year: '' 
   },
   {
     quote: 'The advancement and diffusion of knowledge is the only guardian of true liberty.',
     source: 'James Madison',
-    year: '1751–1836',
-    citation: ''
+    citation: '',
+    year: '1751–1836'
   },
   {
     quote: 'Try and fail, but don’t fail to try.',
     source: 'John Quincy Adams',
-    year: '',
-    citation: ''
+    citation: '',
+    year: ''
   },
   {
     quote: 'One man with courage makes a majority.',
     source: 'Andrew Jackson',
-    year: '1767–1845',
-    citation: ''
+    citation: '',
+    year: '1767–1845'
   },
   {
     quote: 'It is not strange… to mistake change for progress',
     source: 'Millard Fillmore ',
-    year: '',
-    citation: ''
+    citation: '',
+    year: ''
   },
   {
     quote: 'I am a slow walker, but I never walk backwards',
-    source: ' Abraham Lincoln',
-    year: '1809–1865',
-    citation: 'https://www.lifehack.org/articles/productivity/55-inspiring-quotes-from-presidents-that-will-change-your-life.html'
+    source: 'Abraham Lincoln',
+    citation: 'https://www.lifehack.org/articles/productivity/55-inspiring-quotes-from-presidents-that-will-change-your-life.html',
+    year: '1809–1865'
   },
   {
     quote: 'If wrinkles must be written on our brow, let them not be written on our heart. The spirit should never grow old.',
     source: 'James Garfield ',
-    year: '',
-    citation: ''
+    citation: '',
+    year: ''
   },
 ]
 
@@ -62,16 +62,37 @@ const quotes = [
 ***/
 function getRandomQuote (arr) {
   let randomNum = Math.floor( Math.random() * arr.length) + 1;
-  let quote = arr[randomNum -1].quote;
+  let quote = arr[randomNum -1];
+  // console.log(randomNum);
+  //console.log(quote);
   return quote;
 }
-console.log(getRandomQuote(quotes));
+//getRandomQuote(quotes);
 
 /***
  * `printQuote` function
 ***/
 
+function printQuote () {
+  let quoteToPrint = getRandomQuote(quotes);
+  console.log(quoteToPrint);
 
+  let html = `
+  <p class="quote"> ${quoteToPrint.quote} </p> 
+  <p class="source"> ${quoteToPrint.source}
+  `;
+    
+    if (quoteToPrint.citation) {
+      html += `<span class="citation"> ${quoteToPrint.citation} </span>`
+    }
+    if (quoteToPrint.year) {
+      html += `<span class="year">${quoteToPrint.year}</span>`
+    }
+    html += '</p>'
+    console.log(html);
+    
+    return document.getElementById('quote-box').innerHTML = html; 
+}
 
 
 /***
