@@ -12,34 +12,46 @@ project 1 - A Random Quote Generator
 ***/
 const quotes = [
   {
-    quote: '1',
-    source: '',
-    citation: '',
-    year: ''
+    quote: 'On matters of style, swim with the current, on matters of principle, stand like a rock.',
+    source: 'Thomas Jefferson',
+    year: '',
+    citation: '' 
   },
   {
-    quote: '2',
-    source: '',
+    quote: 'The advancement and diffusion of knowledge is the only guardian of true liberty.',
+    source: 'James Madison',
+    year: '1751–1836',
+    citation: ''
   },
   {
-    quote: '3',
-    source: '',
+    quote: 'Try and fail, but don’t fail to try.',
+    source: 'John Quincy Adams',
+    year: '',
+    citation: ''
   },
   {
-    quote: '4',
-    source: '',
+    quote: 'One man with courage makes a majority.',
+    source: 'Andrew Jackson',
+    year: '1767–1845',
+    citation: ''
   },
   {
-    quote: '5',
-    source: '',
+    quote: 'It is not strange… to mistake change for progress',
+    source: 'Millard Fillmore ',
+    year: '',
+    citation: ''
   },
   {
-    quote: '6',
-    source: '',
+    quote: 'I am a slow walker, but I never walk backwards',
+    source: ' Abraham Lincoln',
+    year: '1809–1865',
+    citation: 'https://www.lifehack.org/articles/productivity/55-inspiring-quotes-from-presidents-that-will-change-your-life.html'
   },
   {
-    quote: '7',
-    source: '',
+    quote: 'If wrinkles must be written on our brow, let them not be written on our heart. The spirit should never grow old.',
+    source: 'James Garfield ',
+    year: '',
+    citation: ''
   },
 ]
 
